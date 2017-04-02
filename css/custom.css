@@ -127,6 +127,20 @@ header {
     
     padding: 1em 0em;
 }
+
+
+/* SKILLS
+-------------------------------------------------*/
+.chart{
+    position: relative;
+    display: inline-block;
+    margin: 3em;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+}
+
+
 /* CONTACT
 -------------------------------------------------*/
 input.form-control {
