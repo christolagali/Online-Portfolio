@@ -26,10 +26,16 @@
 </head>
 
 <body>
+<!-- Top Fixed Menu-->
+
 <!--wrapper start-->
 <!--wrapper class and then divide each part of our documents via section tag and place classes specifically for each-->
 <div class="wrapper" id="wrapper">
-	
+	<nav id ="top-nav-bar" class="navbar navbar-default navbar-fixed-top">
+		<p>
+			<a id="nav-menu-home" href="#myheader">Home</a>|<a id="nav-menu-portfolio" href="#aboutus">Portfolio</a>|<a id="nav-menu-skills" href="#skills">Skills</a>|<a id="nav-menu-experience" href="#Experience">Experience</a>
+		</p>
+	</nav><!-- End of Fixed Menu -->
 	<!--header-->
 	<!--we will not put a container div on the header section as we want it to expand all throughout the browser size.-->
 	<header id="myheader">
@@ -42,7 +48,7 @@
 					
 					<h2 class="display-2">Hello! I am Chris</h2>
 					<h3 class="learn">Passionate Engineer from Hayward, CA</h3>
-					<a href="#" ><img class="learn" id="site-title" src="" alt="Read More"/></a>
+					<a href="http://www.csueastbay.edu/its/it/news/index.html#alumni-interview-c-lagali" ><img class="learn" id="site-title" src="" alt="Read More"/></a>
 					
 				</div>
 				<div id="down-arrow-div"  class="learn">
@@ -114,7 +120,7 @@
 			<div class="card card-inverse card-info text-center">
 			  <img class="card-img-top" src="img/card4_1.png" alt="Card image cap">
 			  <div class="card-block">
-			    <h4 class="card-title">Project #4</h4>
+			    <h4 class="card-title">Project BlindBike</h4>
 			    <p class="card-text">Android App for Traffic light detection to Assist Biking among Visually Challenged Individuals.</p>
 			    <a href="https://www.youtube.com/playlist?list=PL4C-_gTZc321EquZOT9FFnzgm-wLgPMhj" class="btn btn-primary">Learn More</a>
 		  	</div>
@@ -320,6 +326,7 @@
 	</section>
 	<!--End of Footer-->
 	<a href="#" id="arrowToTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+
 </div><!--wrapper end-->
 
 
@@ -366,7 +373,30 @@ $(function () {
 		$('html,body').animate({scrollTop:"10px"},1200);
  	});
 
+	
+	
+	$('#nav-menu-home').click(function(event){
+		event.preventDefault();
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+	});
+
+	$('#nav-menu-portfolio').click(function(event){
+		event.preventDefault();
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+	});
  	
+ 	$('#nav-menu-skills').click(function(event){
+		event.preventDefault();
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+	});
+
+	$('#nav-menu-experience').click(function(event){
+		event.preventDefault();
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+		console.log(this);
+	});
+
+
  });	
 
 </script>
